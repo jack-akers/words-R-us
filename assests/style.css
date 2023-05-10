@@ -9,11 +9,24 @@
     font-size: 100px;
     padding-top: 20px;
     text-shadow: 10px 10px 10px black;
-
+    border-radius: 25px;
+    width: 100%;
 }
 #form{
-    margin-top: 100px;
+    margin-top: 150px;
 }
 #search-input{
+    width: 75%;
+    background-color: aliceblue;
+    margin-left: 10%; margin-right: 10%;
 
+}
+#search-button{
+    background-color:darkred;
+    height: 100px;
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 50%; margin-right: 50%;
+    border-radius: 25px;
+    font-size: 25px;
 }

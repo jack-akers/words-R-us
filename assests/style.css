@@ -1,0 +1,19 @@
+*{
+    background-color: rgb(140, 17, 255)
+}
+.title{
+    text-align: center;
+    background-color:rgb(219, 142, 0);
+    color: rgb(114, 179, 2);
+    height: 200px;
+    font-size: 100px;
+    padding-top: 20px;
+    text-shadow: 10px 10px 10px black;
+
+}
+#form{
+    margin-top: 100px;
+}
+#search-input{
+
+}

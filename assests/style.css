@@ -1,17 +1,16 @@
 *{
-    background-color: rgb(140, 17, 255)
+    background-color: lightblue;
 }
 .title{
     text-align: center;
-    background-color:rgb(219, 142, 0);
-    color: rgb(0, 0, 0);
+    background-color:rgb(47, 47, 128);
+    color: rgb(255, 226, 251);
     height: 200px;
     font-size: 100px;
     padding-top: 20px;
-    text-shadow: 10px 10px 5px #5e0000;
     border-radius: 25px;
     width: 100%;
-    box-shadow: -10px 20px 10px #5e0000;
+    box-shadow: -10px 20px 10px #290050;
 }
 #form{
     margin-top: 150px;
@@ -30,6 +29,6 @@
     margin-left: 50%; margin-right: 50%;
     border-radius: 25px;
     font-size: 25px;
-    color: #15fd00;
-    box-shadow: -10px 10px 20px rgb(192, 192, 192)
+    color: #d0ffcb;
+    box-shadow: -10px 10px 20px rgb(255, 255, 255)
 }

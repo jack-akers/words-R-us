@@ -4,13 +4,14 @@
 .title{
     text-align: center;
     background-color:rgb(219, 142, 0);
-    color: rgb(114, 179, 2);
+    color: rgb(0, 0, 0);
     height: 200px;
     font-size: 100px;
     padding-top: 20px;
-    text-shadow: 10px 10px 10px black;
+    text-shadow: 10px 10px 5px #5e0000;
     border-radius: 25px;
     width: 100%;
+    box-shadow: -10px 20px 10px #5e0000;
 }
 #form{
     margin-top: 150px;
@@ -22,11 +23,13 @@
 
 }
 #search-button{
-    background-color:darkred;
+    background-color:black;
     height: 100px;
     width: 200px;
     margin-top: 50px;
     margin-left: 50%; margin-right: 50%;
     border-radius: 25px;
     font-size: 25px;
+    color: rgb(21, 253, 0);
+    box-shadow: -10px 10px 20px rgb(192, 192, 192)
 }

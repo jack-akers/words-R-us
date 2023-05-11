@@ -29,7 +29,17 @@ function getApi(requestUrl) {
 
 searchButton.on('click', getApi)
 
-
+function getSynonymsApi(requestUrlSynonyms) {
+  var requestUrlSynonyms =`https://www.stands4.com/services/v2/syno.php?uid=1001&tokenid=tk324324&word=consistent&format=json`
+  fetch(requestUrlSynonyms)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+     console.log(data)
+    })
+};
+searchButton.on('click', getSynonymsApi)
 
 
 

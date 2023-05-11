@@ -5,6 +5,43 @@ var word = $(searchInput).val()
 var def = $('definition')
 var synonym = $('#synonym')
  
-var requestDictionaryAPI=`https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=b09d1310-a453-424a-9da2-e911b084efce`
+
+
+function getApi(requestUrl) {
+    var requestUrl=`https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=b09d1310-a453-424a-9da2-e911b084efce`
+
+    fetch(requestUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+       
+       console.log(data)
+
+      })
+  
+  };
+
+
+
+
+
+
+searchButton.on('click', getApi)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -17,7 +17,7 @@ function getApi(requestUrl) {
       .then(function (data) {
        
        console.log(data)
-
+        
       })
   
   };

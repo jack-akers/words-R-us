@@ -51,7 +51,19 @@ function getSynonymsApi(requestUrlSynonyms) {
 };
 searchButton.on('click', getSynonymsApi, getApi)
 
-
+var word = 'bright'
+$.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/thesaurus?word=' + word,
+    headers: { 'X-Api-Key': 'J6nLD/htJ/diddzSyLBckA==i64GEEwXxxucqjXK'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
 
 
 

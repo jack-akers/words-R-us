@@ -18,7 +18,6 @@ function getApi(requestUrl) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data)
         searchedWord.text(data[0].hwi.hw)
         partOfSpeach.text(data[0].fl)
         
@@ -33,37 +32,37 @@ function getApi(requestUrl) {
   
   };
 
+ 
+function synonymApi(){
+  word = $(searchInput).val()
+  $.ajax({
+      method: 'GET',
+      url: `https://api.api-ninjas.com/v1/thesaurus?word=${word}`,
+      headers: { 'X-Api-Key': 'J6nLD/htJ/diddzSyLBckA==i64GEEwXxxucqjXK'},
+      contentType: 'application/json',
+      success: function(result) {
+        for (i = 0; i < 5; i++) {
+          console.log(result.synonyms[i])
+          synonym.append(result.synonyms[i] + " ")
+        }
+  
+      },
+      error: function ajaxError(jqXHR) {
+          console.error('Error: ', jqXHR.responseText);
+      }
+      
+  });
+}
 
 
 
 
 
 
-function getSynonymsApi(requestUrlSynonyms) {
-  var requestUrlSynonyms =`https://www.stands4.com/services/v2/syno.php?uid=1001&tokenid=tk324324&word=consistent&format=json`
-  fetch(requestUrlSynonyms)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-     console.log(data)
-    })
-};
-searchButton.on('click', getSynonymsApi, getApi)
-
-var word = 'bright'
-$.ajax({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/thesaurus?word=' + word,
-    headers: { 'X-Api-Key': 'J6nLD/htJ/diddzSyLBckA==i64GEEwXxxucqjXK'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
+searchButton.on('click',function(){
+  getApi()
+  synonymApi()
+})
 
 
 

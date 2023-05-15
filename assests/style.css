@@ -1,5 +1,6 @@
 *{
     background-color: lightblue;
+    font-family: 'Advent Pro', sans-serif;
 }
 .title{
     text-align: center;
@@ -11,6 +12,7 @@
     border-radius: 25px;
     width: 100%;
     box-shadow: -10px 20px 10px #290050;
+    font-family: 'Press Start 2P', cursive;
 }
 #form{
     margin-top: 150px;

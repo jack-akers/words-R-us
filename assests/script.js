@@ -1,16 +1,18 @@
 var searchInput = $('#search-input')
 var searchButton = $('#search-button')
 var searchHistory = $('#search-history')
-var word = $(searchInput).val()
+var word
 var def = $('#definition')
 var synonym = $('#synonym')
 var searchedWord = $('#searched-word')
 var partOfSpeach = $('#part-of-speach')
  
-
+function userSearch() {
+ word = $(searchInput).val()
+  localStorage.setItem('word', word);
+}
 
 function getApi(requestUrl) {
-  word = $(searchInput).val()
     var requestUrl=`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=b09d1310-a453-424a-9da2-e911b084efce`
 
     fetch(requestUrl)
@@ -18,6 +20,7 @@ function getApi(requestUrl) {
         return response.json();
       })
       .then(function (data) {
+        
         searchedWord.text(data[0].hwi.hw)
         partOfSpeach.text(data[0].fl)
         
@@ -28,13 +31,30 @@ function getApi(requestUrl) {
         }
         
         
+      var a=$('.history').text();
+      var b=word;
+
+      if (a.includes(b)){
+        return
+
+      } else {
+        var button = $("<button>", {class:"history"});
+        button.text(word);
+        $(searchHistory).prepend(button);
+          if ($("button").length>11)
+        {
+            searchHistory.find("button:last").remove();
+        }
+      }
+
+
+
       })
   
   };
 
  
 function synonymApi(){
-  word = $(searchInput).val()
   $.ajax({
       method: 'GET',
       url: `https://api.api-ninjas.com/v1/thesaurus?word=${word}`,
@@ -43,7 +63,7 @@ function synonymApi(){
       success: function(result) {
         for (i = 0; i < 5; i++) {
           console.log(result.synonyms[i])
-          synonym.append(result.synonyms[i] + " ")
+          synonym.append(result.synonyms[i] + "; ")
         }
   
       },
@@ -59,13 +79,26 @@ function synonymApi(){
 
 
 
-searchButton.on('click',function(){
+searchButton.on('click',function(event){
+  $('p').empty()
+  event.preventDefault()
+  userSearch()
   getApi()
   synonymApi()
 })
 
 
+$(searchHistory).on("click",".history", function(){
+    def.empty()
+    synonym.empty()
+    
+   word=$(this).text();
+  var requestUrl=`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=b09d1310-a453-424a-9da2-e911b084efce`
+  getApi(requestUrl);
 
+  synonymApi()
+
+})
 
 
 

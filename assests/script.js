@@ -107,7 +107,7 @@ searchButton.on('click',function(event){
     }
     
   }
-  // event.preventDefault()
+   event.preventDefault()
   userSearch()
   getApi()
   synonymApi()

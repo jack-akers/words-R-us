@@ -12,7 +12,6 @@
     border-radius: 25px;
     width: 100%;
     box-shadow: -10px 20px 10px #290050;
-    font-family: 'Press Start 2P', cursive;
 }
 #form{ became search-history
     margin-top: 150px;
@@ -35,14 +34,23 @@
     box-shadow: -10px 10px 20px rgb(255, 255, 255)
 } */
 
+.title1{
+    background-color:rgb(47, 47, 128);
+    color: rgb(255, 226, 251);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100px;
+}
+
+.subtitle{
+    background-color:rgb(47, 47, 128);
+    color: rgb(255, 226, 251);
+}
 .hero-body {
     text-align: center;
     background-color:rgb(47, 47, 128);
     color: rgb(255, 226, 251);
     border-radius: 25px;
     box-shadow: -10px 20px 10px #290050;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 100px;
 }
 
 .search-history {
@@ -77,4 +85,13 @@
 
 .tile {
     padding: 20px;
+}
+
+.title{
+    background-color: white;
+}
+
+.text{
+    background-color: white;
+
 }

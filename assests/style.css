@@ -18,17 +18,13 @@
 }
 #search-input{
     width: 75%;
-    background-color: aliceblue;
     margin-left: 10%; margin-right: 10%;
 
 }
 #search-button{
     background-color:black;
-    height: 100px;
-    width: 200px;
     margin-top: 50px;
     margin-left: 50%; margin-right: 50%;
-    border-radius: 25px;
     font-size: 25px;
     color: #d0ffcb;
     box-shadow: -10px 10px 20px rgb(255, 255, 255)
@@ -77,10 +73,17 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 25px;
-    background-color:black;
     border-radius: 25px;
+}
+
+#search-button {
+    background-color:black;
     color: #d0ffcb;
-    box-shadow: -10px 10px 20px rgb(255, 255, 255)
+    box-shadow: -10px 10px 20px rgb(255, 255, 255);
+    height: 100px;
+    width: 200px;
+    border-radius: 25px;
+
 }
 
 .tile {
@@ -94,4 +97,9 @@
 .text{
     background-color: white;
 
+}
+.is-outlined{
+    background-color:rgb(47, 47, 128);
+    color: rgb(255, 226, 251);
+    box-shadow: -5px 5px 20px rgb(255, 255, 255);
 }

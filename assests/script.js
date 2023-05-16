@@ -6,10 +6,27 @@ var def = $('#definition')
 var synonym = $('#synonym')
 var searchedWord = $('#searched-word')
 var partOfSpeach = $('#part-of-speach')
- 
+
+var previousSearches = JSON.parse(localStorage.getItem('words'))|| [];
+
+
+if(previousSearches.length > 0){
+  for(i=0; i< previousSearches.length; i++){
+    
+    var button = $("<button>", {class:"history"});
+    button.text(previousSearches[i]);
+    $(searchHistory).prepend(button);
+  }
+}
+
 function userSearch() {
  word = $(searchInput).val()
-  localStorage.setItem('word', word);
+ previousSearches.unshift(word)
+ if(previousSearches.length > 7){
+  previousSearches.pop()
+ };
+  localStorage.setItem('words', JSON.stringify(previousSearches));
+  
 }
 
 function getApi(requestUrl) {
@@ -41,7 +58,7 @@ function getApi(requestUrl) {
         var button = $("<button>", {class:"history"});
         button.text(word);
         $(searchHistory).prepend(button);
-          if ($("button").length>11)
+          if ($("button").length>7)
         {
             searchHistory.find("button:last").remove();
         }
@@ -81,10 +98,18 @@ function synonymApi(){
 
 searchButton.on('click',function(event){
   $('p').empty()
+  for(i=0; i< previousSearches.length; i++){
+    if(searchInput.val() === previousSearches){
+      previousSearches.unshift(word)
+    }
+    
+  }
   event.preventDefault()
   userSearch()
   getApi()
   synonymApi()
+ 
+  
 })
 
 

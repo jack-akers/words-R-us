@@ -6,11 +6,32 @@ var def = $('#definition')
 var synonym = $('#synonym')
 var searchedWord = $('#searched-word')
 var partOfSpeach = $('#part-of-speach')
-var btn = $('#button')
- 
+
+var previousSearches = JSON.parse(localStorage.getItem('words'))|| [];
+
+
+if(previousSearches.length > 0){
+  for(i=0; i< previousSearches.length; i++){
+   
+    if(searchInput.val() == previousSearches[i]){
+      previousSearches= Set(word)
+    }
+      
+    
+     var button = $("<button>", {class:"history button is-outlined is-rounded  is-medium is-responsive"});
+     button.text(previousSearches[i]);
+    $(searchHistory).prepend(button);
+  }
+}
+
 function userSearch() {
  word = $(searchInput).val()
-  localStorage.setItem('word', word);
+ previousSearches.unshift(word)
+ if(previousSearches.length > 7){
+  previousSearches.pop()
+ };
+  localStorage.setItem('words', JSON.stringify(previousSearches));
+  
 }
 
 function getApi(requestUrl) {
@@ -39,10 +60,10 @@ function getApi(requestUrl) {
         return
 
       } else {
-        var button = $("<button>", {class:"history"});
+        var button = $("<button>", {class:"history button is-outlined is-rounded is-medium is-responsive"});
         button.text(word);
         $(searchHistory).prepend(button);
-          if ($("button").length>11)
+          if ($("button").length>7)
         {
             searchHistory.find("button:last").remove();
         }
@@ -81,24 +102,37 @@ function synonymApi(){
 
 
 searchButton.on('click',function(event){
-  $('p').empty()
-  event.preventDefault()
+  $(def).empty()
+  $(partOfSpeach).empty()
+  $(synonym).empty()
+
+  
+   event.preventDefault()
   userSearch()
   getApi()
   synonymApi()
+ 
+  
 })
 
 
 $(searchHistory).on("click",".history", function(){
     def.empty()
     synonym.empty()
-    
+    partOfSpeach.empty()
+
+
+    if(searchInput.val() === previousSearches[i]){
+        return
+      }else{
+
+
    word=$(this).text();
   var requestUrl=`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=b09d1310-a453-424a-9da2-e911b084efce`
   getApi(requestUrl);
 
   synonymApi()
-
+      }
 })
 
 

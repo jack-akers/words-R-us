@@ -6,6 +6,7 @@ var def = $('#definition')
 var synonym = $('#synonym')
 var searchedWord = $('#searched-word')
 var partOfSpeach = $('#part-of-speach')
+var btn = $('#button')
  
 function userSearch() {
  word = $(searchInput).val()

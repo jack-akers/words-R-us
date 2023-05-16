@@ -98,3 +98,8 @@
     background-color: white;
 
 }
+.is-outlined{
+    background-color:rgb(47, 47, 128);
+    color: rgb(255, 226, 251);
+    box-shadow: -5px 5px 20px rgb(255, 255, 255);
+}

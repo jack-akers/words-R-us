@@ -2,7 +2,7 @@
     background-color: lightblue;
     font-family: 'Advent Pro', sans-serif;
 }
-.title{
+/* .title{ became hero-body
     text-align: center;
     background-color:rgb(47, 47, 128);
     color: rgb(255, 226, 251);
@@ -14,7 +14,7 @@
     box-shadow: -10px 20px 10px #290050;
     font-family: 'Press Start 2P', cursive;
 }
-#form{
+#form{ became search-history
     margin-top: 150px;
 }
 #search-input{
@@ -33,4 +33,48 @@
     font-size: 25px;
     color: #d0ffcb;
     box-shadow: -10px 10px 20px rgb(255, 255, 255)
+} */
+
+.hero-body {
+    text-align: center;
+    background-color:rgb(47, 47, 128);
+    color: rgb(255, 226, 251);
+    border-radius: 25px;
+    box-shadow: -10px 20px 10px #290050;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 100px;
+}
+
+.search-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 15px;
+    column-gap: 30px;
+}
+
+.search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px;
+    background-color: aliceblue;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px;
+    background-color:black;
+    border-radius: 25px;
+    color: #d0ffcb;
+    box-shadow: -10px 10px 20px rgb(255, 255, 255)
+}
+
+.tile {
+    padding: 20px;
 }

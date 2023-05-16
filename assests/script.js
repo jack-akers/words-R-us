@@ -12,9 +12,14 @@ var previousSearches = JSON.parse(localStorage.getItem('words'))|| [];
 
 if(previousSearches.length > 0){
   for(i=0; i< previousSearches.length; i++){
+   
+    if(searchInput.val() == previousSearches[i]){
+      previousSearches= Set(word)
+    }
+      
     
-    var button = $("<button>", {class:"history button is-outlined is-rounded is-primary is-medium is-responsive"});
-    button.text(previousSearches[i]);
+     var button = $("<button>", {class:"history button is-outlined is-rounded  is-medium is-responsive"});
+     button.text(previousSearches[i]);
     $(searchHistory).prepend(button);
   }
 }
@@ -55,7 +60,7 @@ function getApi(requestUrl) {
         return
 
       } else {
-        var button = $("<button>", {class:"history button is-outlined is-rounded is-primary is-medium is-responsive"});
+        var button = $("<button>", {class:"history button is-outlined is-rounded is-medium is-responsive"});
         button.text(word);
         $(searchHistory).prepend(button);
           if ($("button").length>7)
@@ -101,12 +106,7 @@ searchButton.on('click',function(event){
   $(partOfSpeach).empty()
   $(synonym).empty()
 
-  for(i=0; i< previousSearches.length; i++){
-    if(searchInput.val() === previousSearches){
-      previousSearches.unshift(word)
-    }
-    
-  }
+  
    event.preventDefault()
   userSearch()
   getApi()
@@ -119,13 +119,20 @@ searchButton.on('click',function(event){
 $(searchHistory).on("click",".history", function(){
     def.empty()
     synonym.empty()
-    
+    partOfSpeach.empty()
+
+
+    if(searchInput.val() === previousSearches[i]){
+        return
+      }else{
+
+
    word=$(this).text();
   var requestUrl=`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=b09d1310-a453-424a-9da2-e911b084efce`
   getApi(requestUrl);
 
   synonymApi()
-
+      }
 })
 
 

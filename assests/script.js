@@ -13,7 +13,7 @@ var previousSearches = JSON.parse(localStorage.getItem('words'))|| [];
 if(previousSearches.length > 0){
   for(i=0; i< previousSearches.length; i++){
     
-    var button = $("<button>", {class:"history"});
+    var button = $("<button>", {class:"history button is-outlined is-rounded is-primary is-medium is-responsive"});
     button.text(previousSearches[i]);
     $(searchHistory).prepend(button);
   }
@@ -55,7 +55,7 @@ function getApi(requestUrl) {
         return
 
       } else {
-        var button = $("<button>", {class:"history"});
+        var button = $("<button>", {class:"history button is-outlined is-rounded is-primary is-medium is-responsive"});
         button.text(word);
         $(searchHistory).prepend(button);
           if ($("button").length>7)
@@ -97,14 +97,17 @@ function synonymApi(){
 
 
 searchButton.on('click',function(event){
-  $('p').empty()
+  $(def).empty()
+  $(partOfSpeach).empty()
+  $(synonym).empty()
+
   for(i=0; i< previousSearches.length; i++){
     if(searchInput.val() === previousSearches){
       previousSearches.unshift(word)
     }
     
   }
-  event.preventDefault()
+  // event.preventDefault()
   userSearch()
   getApi()
   synonymApi()

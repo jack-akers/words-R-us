@@ -13,25 +13,39 @@ var previousSearches = JSON.parse(localStorage.getItem('words'))|| [];
 if(previousSearches.length > 0){
   for(i=0; i< previousSearches.length; i++){
    
-    if(searchInput.val() == previousSearches[i]){
-      previousSearches= Set(word)
-    }
-      
     
      var button = $("<button>", {class:"history button is-outlined is-rounded  is-medium is-responsive"});
      button.text(previousSearches[i]);
-    $(searchHistory).prepend(button);
-  }
+    $(searchHistory).prepend(button);}
+  
 }
 
 function userSearch() {
  word = $(searchInput).val()
- previousSearches.unshift(word)
+ // check if word was previously searched
+ for(i=0;i<previousSearches.length;i++){
+  // if searched before, remove it from the array
+  if(previousSearches[i] == word){
+    const x = previousSearches.splice(i, 1);
+  }
+ }
+
+ // now that the word no longer exists, now word only exists once in array once unshifted 
+previousSearches.unshift(word)
  if(previousSearches.length > 7){
   previousSearches.pop()
  };
+ console.log(previousSearches)
+ // remove all buttons
+ while(document.querySelector('#search-history').firstChild){
+  document.querySelector('#search-history').firstChild.remove()
+ }
+ // re append all buttons by the newly organized array
+ for(i=0; i< previousSearches.length; i++){ 
+  var button = $("<button>", {class:"history button is-outlined is-rounded  is-medium is-responsive"});
+  button.text(previousSearches[i]);
+ $(searchHistory).prepend(button);}
   localStorage.setItem('words', JSON.stringify(previousSearches));
-  
 }
 
 function getApi(requestUrl) {
@@ -105,8 +119,6 @@ searchButton.on('click',function(event){
   $(def).empty()
   $(partOfSpeach).empty()
   $(synonym).empty()
-
-  
    event.preventDefault()
   userSearch()
   getApi()
@@ -122,9 +134,7 @@ $(searchHistory).on("click",".history", function(){
     partOfSpeach.empty()
 
 
-    if(searchInput.val() === previousSearches[i]){
-        return
-      }else{
+    
 
 
    word=$(this).text();
@@ -132,7 +142,7 @@ $(searchHistory).on("click",".history", function(){
   getApi(requestUrl);
 
   synonymApi()
-      }
+      
 })
 
 // Select a random word from the array

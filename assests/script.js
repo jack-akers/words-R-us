@@ -135,12 +135,42 @@ $(searchHistory).on("click",".history", function(){
       }
 })
 
+// Select a random word from the array
+function getWordOfTheDay() {
+  var words = ['abstemious', 'bereft', 'complaisant', 'ebullient', 'fastidious', 'gregarious', 'inexorable', 'jocular', 'laconic', 'mendacious'];
+  var word = words[Math.floor(Math.random() * words.length)];
+  var requestUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=b09d1310-a453-424a-9da2-e911b084efce`;
 
+  fetch(requestUrl)
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('API request failed.');
+      }
+    })
+    .then(function (data) {
+      console.log(data);
+      // Check if the 'shortdef' and 'fl' properties exist in the data object
+      if (data && data[0] && data[0].shortdef && data[0].shortdef[0] && data[0].fl) {
+        var definition = data[0].shortdef[0];
+        var partOfSpeech = data[0].fl;
+        displayWordOfTheDay(word, definition, partOfSpeech);
+      } else {
+        throw new Error('Definition not found.');
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
 
+// Display the word of the day
+function displayWordOfTheDay(word, definition, partOfSpeech) {
+  $('#wordOfTheDay').text(word);
+  $('#wordOfTheDayDefinition').text(definition);
+  $('#wordOfTheDayPartOfSpeech').text(partOfSpeech);
+}
 
-
-
-
-
-
-
+// Call the function to get and display the word of the day
+getWordOfTheDay();

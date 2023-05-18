@@ -13,7 +13,7 @@
 <!-- Hero Bar -->
   <section class="hero">
     <div class="hero-body">
-      <p class="title1">
+      <p class="title1 is-size-1">
         Words Я Us 📚
       </p>
       <p class="subtitle">
@@ -40,36 +40,40 @@
 <!-- Word of the Day and Definition & Synonym section -->
 <div class="tile">
     <div class="tile is-4 is-vertical is-parent">
-      <div class="tile is-child box">
-        <p class="title">Word of the Day:</p>
-        <p class="text"></p>
-        <p id="wordOfTheDay"></p>
-        <p id="wordOfTheDayDefinition"></p>
-  <p id="wordOfTheDayPartOfSpeech"></p>
-  <p id="wordOfTheDaySynonyms"></p>
+        <div class="tile is-child box">
+            <h2 class="title is-size-2 is-underlined">Random Word:</h2>
+            <h3 class="title is-size-1" id="wordOfTheDay"></h3>
+            <p class="text is-size-3" id="wordOfTheDayPartOfSpeech"></p>
+            <p class="text text is-size-3" id="wordOfTheDayDefinition"></p>
+            <!-- <p class="text is-size-3" id="wordOfTheDaySynonyms"></p> -->
   
       </div>
     </div>
     <div class="tile is-parent">
         <div class="tile is-child box" id="result-area">
-        <h2 class="title" id="searched-word"></h2>
-        <p class="text" id="part-of-speach"></p>
-        <p class="text" id="definition"></p>
-        <p class="text" id="synonym"></p>
+        <h2 class="title is-size-2 is-underlined">Definition:</h2>
+        <h3 class="title is-size-1" id="searched-word"></h3>
+        <p class="text is-size-3" id="part-of-speach"></p>
+        <p class="text is-size-3" id="definition"></p>
+        <br></br>
+        <h2 class="title is-size-2 is-underlined">Synonym:</h2>
+        <p class="text is-size-3" id="synonym"></p>
       </div>
     </div>
   </div>
-
+    <br></br>
+    <br></br>
+    <br></br>
 <!-- Footer -->
-<footer class="footer">
-    <div class="content has-text-centered">
+<!-- <footer class="footer"> -->
+    <footer class="content has-text-centered">
       <p>
         <strong> &copy; Words R Us</strong> by <a href="https://jgthms.com">Jack, Ian, Anthony, Josh and Cristina</a>. The source code is licensed
         <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
       </p>
-    </div>
-</footer>
+    </footer>
+<!-- </footer> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

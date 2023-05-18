@@ -147,7 +147,7 @@ $(searchHistory).on("click",".history", function(){
 
 // Select a random word from the array
 function getWordOfTheDay() {
-  var words = ['abstemious', 'bereft', 'complaisant', 'ebullient', 'fastidious', 'gregarious', 'inexorable', 'jocular', 'laconic', 'mendacious'];
+  var words = ['Abstemious', 'Bereft', 'Complaisant', 'Ebullient', 'Fastidious', 'Gregarious', 'Inexorable', 'Jocular', 'Laconic', 'Mendacious'];
   var word = words[Math.floor(Math.random() * words.length)];
   var requestUrl = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=b09d1310-a453-424a-9da2-e911b084efce`;
 

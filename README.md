@@ -1,4 +1,4 @@
-# words-R-us
+# words-Я-us
 
 ## User Story: 
 AS A student,
@@ -15,9 +15,9 @@ WHEN I view the search history,
 THEN I am presented with a list of saved words from the previous word searches.
 
 ## Description
-The Words R Us Application is a user-friendly tool designed to help students easily search for word definitions and synonyms. With a simple search input, users can quickly find the meaning and related words for any word they enter. The application also provides a "Random Word" feature to learn a new random word upon page refresh. Additionally, users can view their search history, allowing them to conveniently access previously searched words. The project aims to assist students in expanding their vocabulary and improving their written and spoken communication skills.
+The Words Я Us Application is a user-friendly tool designed to help students easily search for word definitions and synonyms. With a simple search input, users can quickly find the meaning and related words for any word they enter. The application also provides a "Random Word" feature to learn a new random word upon page refresh. Additionally, users can view their search history, allowing them to conveniently access previously searched words. The project aims to assist students in expanding their vocabulary and improving their written and spoken communication skills.
 
-Overall, the development of the Words R Us Application allowed us to further refine our web development, API integration, user experience design, and data storage skills. By addressing the need for an efficient and user-friendly tool to support vocabulary expansion and effective communication, we hope to empower students in their language learning endeavors.
+Overall, the development of the Words Я Us Application allowed us to further refine our web development, API integration, user experience design, and data storage skills. By addressing the need for an efficient and user-friendly tool to support vocabulary expansion and effective communication, we hope to empower students in their language learning endeavors.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ Overall, the development of the Words R Us Application allowed us to further ref
 
 ## Installation
 
-To install the Words R Us Application, follow these steps:
+To install the Words Я Us Application, follow these steps:
 
 1. Clone the repository on your local machine using the following command:
 
@@ -42,9 +42,9 @@ cd words-R-us
 
 ## Usage
 
-To use the Words R Us Application, follow these steps:
+To use the Words Я Us Application, follow these steps:
 
-1. Open the Words R Us Application in your web browser.
+1. Open the Words Я Us Application in your web browser.
 2. Use the search bar to search for a word.
 3. The application will display the searched words definition and synonyms.
 4. When the page is refreshed, the application will display a new random word and its definition.
@@ -55,13 +55,13 @@ Deployed website:
 
 https://jack-akers.github.io/words-R-us/
 
-Screenshot of the Words R Us Application:
+Screenshot of the Words Я Us Application:
 
 ![alt text](./assets/images/Screenshot1.png) ![alt text](./assets/images/Screenshot2.png) ![alt text](./assets/images/Screenshot3.png) 
 
 ## Credits
 
-Collaborators for the Words R Us Application:
+Collaborators for the Words Я Us Application:
 
 Ian Rattigan - https://github.com/Rattjohn
 
@@ -85,4 +85,24 @@ We used the following third-party assets in this project:
 
 ## License
 
-<!-- MIT License -->
+MIT License
+
+Copyright (c) 2023 Words Я Us
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

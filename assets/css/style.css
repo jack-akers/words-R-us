@@ -2,42 +2,14 @@
     background-color: lightblue;
     font-family: 'Advent Pro', sans-serif;
 }
-/* .title{ became hero-body
-    text-align: center;
-    background-color:rgb(47, 47, 128);
-    color: rgb(255, 226, 251);
-    height: 200px;
-    font-size: 100px;
-    padding-top: 20px;
-    border-radius: 25px;
-    width: 100%;
-    box-shadow: -10px 20px 10px #290050;
-}
-#form{ became search-history
-    margin-top: 150px;
-}
-#search-input{
-    width: 75%;
-    margin-left: 10%; margin-right: 10%;
 
-}
-#search-button{
-    background-color:black;
-    margin-top: 50px;
-    margin-left: 50%; margin-right: 50%;
-    font-size: 25px;
-    color: #d0ffcb;
-    box-shadow: -10px 10px 20px rgb(255, 255, 255)
-} */
-
-.title1{
+.title1 {
     background-color:rgb(47, 47, 128);
     color: rgb(255, 226, 251);
     font-family: 'Press Start 2P', cursive;
-    font-size: 100px;
 }
 
-.subtitle{
+.subtitle {
     background-color:rgb(47, 47, 128);
     color: rgb(255, 226, 251);
 }
@@ -91,16 +63,22 @@
     padding: 20px;
 }
 
-.title{
+.title {
     background-color: white;
 }
 
-.text{
+.text {
     background-color: white;
 
 }
-.is-outlined{
+.is-outlined {
     background-color:rgb(47, 47, 128);
     color: rgb(255, 226, 251);
     box-shadow: -5px 5px 20px rgb(255, 255, 255);
+}
+
+.content {
+    margin: 50px;
+    padding-bottom: 50px;
+    height: 200px;
 }

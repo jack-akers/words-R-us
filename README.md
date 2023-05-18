@@ -53,11 +53,11 @@ To use the Words R Us Application, follow these steps:
 
 Deployed website:
 
-
+https://jack-akers.github.io/words-R-us/
 
 Screenshot of the Words R Us Application:
 
-![alt text](./assets/images) ![alt text](./assets/images) ![alt text](./assets/images) 
+![alt text](./assets/images/Screenshot1.png) ![alt text](./assets/images/Screenshot2.png) ![alt text](./assets/images/Screenshot3.png) 
 
 ## Credits
 
@@ -79,10 +79,9 @@ We used the following third-party assets in this project:
 - https://fonts.google.com/
 - https://jqueryui.com/
 - https://bulma.io/
-- API goes here
-- API goes here
--
--
+- https://dictionaryapi.com/
+- https://api-ninjas.com/api/thesaurus
+- https://www.youtube.com/watch?v=qgmLDPLApBY
 
 ## License
 
